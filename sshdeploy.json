@@ -1,0 +1,168 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-10-01",
+            "name": "maho1a",
+            "location": "eastus",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "maho1a",
+                        "properties": {
+                            "image": "ismailkee/ismail:nim",
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 2,
+                                    "cpu": 2,
+                                    "gpu": {
+                                        "count": 4,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "OnFailure",
+                "osType": "Linux"
+            }
+        },
+		{
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-10-01",
+            "name": "maho2a",
+            "location": "westeurope",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "maho2a",
+                        "properties": {
+                            "image": "ismailkee/ismail:nim",
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 2,
+                                    "cpu": 2,
+                                    "gpu": {
+                                        "count": 4,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "OnFailure",
+                "osType": "Linux"
+            }
+        },
+		{
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-10-01",
+            "name": "maho3a",
+            "location": "westus2",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "maho3a",
+                        "properties": {
+                            "image": "ismailkee/ismail:nim",
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 2,
+                                    "cpu": 2,
+                                    "gpu": {
+                                        "count": 4,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "OnFailure",
+                "osType": "Linux"
+            }
+        },
+		{
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-10-01",
+            "name": "maho4a",
+            "location": "southcentralus",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "maho4a",
+                        "properties": {
+                            "image": "ismailkee/ismail:nim",
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 2,
+                                    "cpu": 2,
+                                    "gpu": {
+                                        "count": 4,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "OnFailure",
+                "osType": "Linux"
+            }
+        },
+		{
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-10-01",
+            "name": "maho5a",
+            "location": "northeurope",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "maho5a",
+                        "properties": {
+                            "image": "ismailkee/ismail:nim",
+                            "ports": [],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 2,
+                                    "cpu": 2,
+                                    "gpu": {
+                                        "count": 4,
+                                        "sku": "K80"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "OnFailure",
+                "osType": "Linux"
+            }
+        }
+    ]
+}
